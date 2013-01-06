@@ -1,7 +1,6 @@
 *.[oa]
 *.aux
 *.log
-*.pdf
 *.dvi
 *.gz
 *~

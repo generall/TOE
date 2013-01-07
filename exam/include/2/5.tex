@@ -1,0 +1,67 @@
+\subsection{Преобразование Фурье. Частотный и фазовый спектры.}
+
+
+Постулируется, что любую периодическую функцию можно разложить в тригонометрический ряд, называемый рядом Фурье.
+
+
+\begin{equation}
+f(t) = A_0 + \sum_{k=1}^{\infty} A_k \sin(k \omega_0 t + \psi_k)
+\end{equation}
+
+Представив sin в комплексной форме по Эйлеру, получаем:
+
+
+\begin{equation}
+f(t) = A_0 + \frac{1}{2j} \sum_{k = - \infty}^{k = \infty} \dot A_k e^{j k \omega_0 t} 
+\end{equation}
+
+
+\begin{equation}
+\dot A_{k} = A_k e^{j \psi k} = A_k \cos(\psi_k) + j A_k \sin(\psi_k)
+\end{equation}
+
+Выражения для нахождения коэффициентов:
+
+\begin{equation}
+A_k \cos(\psi_k) = \frac{2}{T} \int_{-T/2}^{T/2}f(t)\cos(k \omega_0 t) dt
+\end{equation}
+
+\begin{equation}
+A_k \sin(\psi_k) = \frac{2}{T} \int_{-T/2}^{T/2}f(t)\sin(k \omega_0 t) dt
+\end{equation}
+
+\begin{equation}
+\dot A_k = \frac{1}{2j} \int_{-T/2}^{T/2}f(t) e^{-j k \omega_o t} dt
+\end{equation}
+
+\begin{equation}
+f(t) = A_0 + \sum_{k = - \infty}^{k = \infty} e^{j k \omega_o t} \frac{1}{T} \int_{-T/2}^{T/2}f(t) e^{-j k \omega_o t} dt
+\end{equation}
+
+
+
+Совершая предельный переход $\omega \rightarrow 0; T \rightarrow \infty$
+
+
+\begin{equation}
+ \frac{1}{T} \int_{-T/2}^{T/2}f(t) e^{-j k \omega_o t} dt =  \frac{d \omega}{2 \pi} \int_{-\infty}^{\infty}f(t) e^{-j \omega t} dt
+\end{equation}
+
+Функция 
+
+\begin{equation}
+S(j \omega) = \int_{-\infty}^{\infty}f(t) e^{-j \omega t} dt
+\end{equation}
+
+есть спектр амплитуд при непрерывном преобразовании фурье.
+
+Т.к. функция $ S(j \omega) $ комплексная, то выделяют отдельно амплитудный спектр $ |S(j \omega)| $ и фазовый спектр $ \phi(j \omega)=arg(S(j \omega)) $
+%arg - функция, возвращающая угол наклона комплексного вектора к +1 оси.
+
+Тогда обратное преобразование Фурье будет представлять из себя интеграл по спектру.
+
+\begin{equation}
+f(t) = \frac{1}{2\pi}\int_{-\infty}^{\infty}S(j \omega)e^{j k \omega_o t} d \omega
+\end{equation}
+
+\pagebreak

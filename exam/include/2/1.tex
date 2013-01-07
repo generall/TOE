@@ -1,0 +1,45 @@
+\subsection{Закон Ома для реактивных компонентов электрической цепи}
+
+Пусть дана цепь из последовательно соединенных резистора, конденсатора, катушки индуктивности и генератора синусоидального тока.
+
+Тогда из 2-го закона Кирхгофа следует уравнение для мгновенных значений:
+
+\begin{equation}
+U_R+U_L+U_C=E
+\end{equation}
+
+\begin{equation}
+i R + L \frac{d i}{d t}+\frac{1}{C} \int i d t = E
+\end{equation}
+
+
+Переходим к комплексному представлению
+
+
+\begin{equation}
+\dot I_m R + j \omega L \dot I_m +\dot I_m \frac{-j}{C \omega} = \dot E_m 
+\end{equation}
+
+\begin{equation}\label{eq:sinOhm}
+\dot I_m (R + j \omega L - \frac{j}{C \omega}) = \dot E_m 
+\end{equation}
+
+Множитель $R + j \omega L - \frac{j}{C \omega}$ называют комплексным сопротивлением.
+
+\begin{equation}
+\dot Z = z e^{j \phi} = R + j \omega L - \frac{j}{C \omega}
+\end{equation}
+
+
+\begin{equation}
+\dot Z = R + j X
+\end{equation}
+, где R - активное сопротивления, а X - реактивное сопротивление
+
+\begin{equation}
+X = \omega L - \frac{1}{\omega C}
+\end{equation}
+
+Уравнение ~(\ref{eq:sinOhm}) является законом Ома для цепи синусоидального тока
+
+\pagebreak

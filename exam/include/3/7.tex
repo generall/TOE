@@ -1,0 +1,81 @@
+\subsection{Прямое и обратное преобразование Лапласа}
+
+В соответствие функции времени, называемой оригиналом, ставится функция переменной p, называемой изображением.
+
+\begin{equation}
+F(p) = \int_0^\infty e^{-p t} f(t) dt
+\end{equation}
+
+\begin{equation}
+f(t) = \frac{1}{2 \pi i} \int_{\phi - i \infty}^{\phi - i \infty} e^{p t} F(p) dp
+\end{equation}
+
+
+Изображения некоторых функций:
+
+
+\begin{itemize}
+\item 
+Струпенька
+
+\begin{equation}
+F(p)=\int_0^\infty e^{-p t} E dt =  \left[ \frac{E e^{-p t}}{p} \right]_0^\infty = \frac{E}{p}
+\end{equation}
+
+
+\item
+
+Показательная функция:
+
+\begin{equation}
+F(p)=\int_0^\infty e^{-p t} e^{a t} dt = \int_0^\infty e^{-(p-a) t}  dt = \frac{1}{p-a}
+\end{equation}
+
+\item
+
+$ sin \& cos$ 
+
+\begin{equation}
+F(p) = \int_0^\infty e^{-p t} \sin(a t) dt = \frac{a}{{p}^{2}+{a}^{2}}
+\end{equation}
+
+\begin{equation}
+F(p) = \int_0^\infty e^{-p t} \cos(a t) dt = \frac{p}{{p}^{2}+{a}^{2}}
+\end{equation}
+
+\end{itemize}
+
+Первая производная:
+
+
+\begin{equation}
+\int_0^\infty e^{-p t} \frac{df(t)}{dt} dt = \int_0^\infty e^{-p t} d [f(t)]
+\end{equation}
+
+Интегрируя по частям, получаем $\frac{df(t)}{dt} \risingdotseq p F(p) $
+
+Изображение интеграла:
+$$
+\int_0^\infty e^{-p t} \left[ \int_0^t f(t) dt \right]  dt = - \frac{1}{p} \int_0^\infty  \left[ \int_0^t f(t) dt \right]  d[e^{-p t}]
+$$
+Интегрируя по частям, получаем $\int_0^t f(t) dt \risingdotseq \frac{F(p)}{p} $
+
+
+Теорема смещения:
+
+\begin{equation}
+F(p) = \int_0^\infty e^{-p t} f(t - \tau) dt = e^{-p\tau} F(p)
+\end{equation}
+
+Теорема о изменении масштаба:
+
+\begin{equation}
+F(p) = \int_0^\infty e^{-p t} f(a t) dt = \frac{1}{a}F(\frac{p}{a})
+\end{equation}
+
+Преобразование Лапласа аддитивно как, собственно, и интеграл.
+
+
+
+
+\pagebreak

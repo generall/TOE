@@ -9,6 +9,11 @@
 
 \begin{document}
 
+\renewcommand{\contentsname}{\center\normalsize{СОДЕРЖАНИЕ}}
+	%\renewcommand{\item}{\hspace{15mm}\item}	\pagebreak
+	\tableofcontents 		% оглавление
+	\pagebreak
+
 \input{include/module1}
 \input{include/module2}
 \input{include/module3}
